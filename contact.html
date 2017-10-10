@@ -1,9 +1,13 @@
-<form>
+<h2>Contact me!</h2>
 
-Email address: <br>
-<input type="text" name="Email address"><br>
-Subject:<br>
-<textarea rows="5" cols="50" name="comment" form="usrform">
-  Enter text.</textarea>
-
+<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
 </form>
