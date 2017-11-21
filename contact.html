@@ -2,6 +2,38 @@
   <title>Contact me</title>
   </header>
 <h2>Contact me!</h2>
+<head>
+<style>
+  #div1 {
+    width: 310px;
+    height: 420px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+</style>
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  function drag(e) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appenChild(document.getElementByid(data));
+  }
+</script>
+</head>
+<body>
+  
+  <p>Drag the Corgi into the box!</p>
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <br>
+  <img id="drag1" src="images_cutecorgibutt.png" draggable="true"
+       ondragstart="drag(event)" width="300" height="318">
+</body>
 
 <form action="mailto:someone@example.com" method="post" enctype="text/plain">
 Name:<br>
