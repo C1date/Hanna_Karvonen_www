@@ -49,5 +49,20 @@ Enter text here...</textarea><br><br>
 <input type="reset" value="Reset">
 </form>
   
+  <script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
+  
     <footer>Copyright &copy; Cidate</footer>
 </html>
