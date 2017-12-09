@@ -1,0 +1,6 @@
+plugins:
+  - jekyll-seo-tag
+ 
+gems:
+  gem 'jekyll-seo-tag'
+  gem install jekyll-gist jekyll-coffeescript jekyll-assets another-jekyll-plugin
